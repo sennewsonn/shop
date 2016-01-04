@@ -7,7 +7,7 @@ $ npm i -g gulp
 ```
 
 ```sh
-$ git clone https://github.com/sennewsonn/workflow112015.git site
+$ git clone https://github.com/sennewsonn/shop.git shop
 $ cd site
 $ bower i
 $ npm i
