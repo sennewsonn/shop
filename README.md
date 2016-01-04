@@ -8,7 +8,7 @@ $ npm i -g gulp
 
 ```sh
 $ git clone https://github.com/sennewsonn/shop.git shop
-$ cd site
+$ cd shop
 $ bower i
 $ npm i
 $ gulp
