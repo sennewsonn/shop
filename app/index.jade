@@ -1,0 +1,19 @@
+doctype html
+html(lang="ru_RU")
+	head
+		meta(charset="UTF-8")
+		script(src="bower/jquery/jquery.js")
+		link(rel="stylesheet", href="bower/normalize-css/normalize.css")
+		link(rel="stylesheet", href="style/fonts.css")
+		link(rel="stylesheet", href="style/style.css")
+		title Интернет-магазин
+	body
+		include _blocks/_info-row
+		include _blocks/_header
+		include _blocks/_nav
+		include _blocks/_breadcrumbs
+		.main.clearfix
+			include _blocks/_sidebar
+			include _blocks/_content
+		include _blocks/_information
+		include _blocks/_footer

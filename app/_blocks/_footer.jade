@@ -1,0 +1,21 @@
+footer.footer
+	.footer__inner
+		.footer-left
+			a.logo(href="#")
+				img.logo__image(src="../img/footer-logo.png", alt="Интернет-магазин")
+		.footer-right
+			ul.socials.socials_footer
+				li.socials__item
+					a(href="#").socials__link.socials__link_fb что-нибудь
+				li.socials__item
+					a(href="#").socials__link.socials__link_vk что-нибудь
+				li.socials__item
+					a(href="#").socials__link.socials__link_tw что-нибудь
+
+			- var items = ['Планшеты', 'Мобильные телефоны', 'Mp3 плееры', 'Персональные компьютеры', 'Ноутбуки', 'Аксессуары', 'Бытовая техника'];
+			ul.nav__list.nav__list_footer
+				each val in items
+					li.nav__item
+						a.nav__link(href="#")= val
+
+	.copy All rights reserved. 2015. no copy alowed

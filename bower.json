@@ -1,0 +1,21 @@
+{
+  "name": "clean_frontend",
+  "version": "1.0.0",
+  "authors": [
+    "Xaosaki <xaosaki@gmail.com>"
+  ],
+  "description": "Build for projects",
+  "main": "index.html",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+  }
+}

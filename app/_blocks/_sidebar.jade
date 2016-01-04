@@ -1,0 +1,54 @@
+.sidebar
+	.category
+		ul.category__list
+			li.category__item
+				a.category__link(href="#") Флагманы
+			li.category__item
+				a.category__link.category__link_active(href="#") Бюджетная линейка
+
+	form.filter
+		.filter-fieldset
+			h3.filter-fieldset__title Наличие в магазинах
+			label.filter-label
+				input.filter-label__input(type="radio" checked name="shops" value="1")
+				.filter-label__text.filter-label__text_radio Во всех магазинах
+			label.filter-label
+				input.filter-label__input(type="radio" name="shops" value="2")
+				.filter-label__text.filter-label__text_radio В ближайшем ко мне магазине
+
+		.filter-fieldset
+			h3.filter-fieldset__title Бренды
+			- var brands = ['Lenovo', 'Apple', 'Samsung', 'Asus', 'Motorola'];
+			each name, num in brands
+				label.filter-label
+					input.filter-label__input(type="checkbox" name="brands" value= num)
+					.filter-label__text.filter-label__text_checkbox= name
+			a(href="#").filter__reset Сбросить фильтр
+
+		.filter-fieldset
+			h3.filter-fieldset__title Цена
+			label.filter-label__range
+				span.filter-label__range-text от
+				input.filter-label__range-value(type="text")
+			label.filter-label__range
+				span.filter-label__range-text до
+				input.filter-label__range-value(type="text")
+			.filter-label__range-bar
+
+		.filter-fieldset
+			h3.filter-fieldset__title Цвета
+			- var colors = ['#ffffff', '#cccccc', '#000000', '#0a3153', '#ff1800', '#fff343', '#fb914a', '#92c37c', '#40a6ff', '#9870ad', '#dc78ad', '#7f401d'];
+			each name in colors
+				label.filter-label.filter-label_colors
+					input.filter-label__input(type="checkbox" name="colors" value= name)
+					.filter-label__text_colors(class="filter-label__text_#{name}")
+
+
+		.filter-fieldset
+			h3.filter-fieldset__title Операционные системы
+			- var oses = ['Android', 'iOS', 'Windows Mobile', 'Symbian', 'Custom'];
+			each name, num in oses
+				label.filter-label
+					input.filter-label__input(type="checkbox" name="oses" value= num)
+					.filter-label__text.filter-label__text_checkbox= name
+			a(href="#").filter__reset Сбросить фильтр

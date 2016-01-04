@@ -1,0 +1,17 @@
+- var links = ['Карта проезда', 'История заказов', 'Корзина'];
+
+header.header
+
+	a.logo(href="#")
+		img.logo__image(src="../img/header-logo.png", alt="Интернет-магазин")
+	
+	form.search
+		input.search__input(type="search", placeholder="Что будем искать")
+		button.search__submit(type="submit") Найти
+
+	.links
+		ul.links__list
+			each link in links
+				li.links__item
+					a.links__link(href="#")= link
+

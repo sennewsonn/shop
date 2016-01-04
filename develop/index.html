@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="ru_RU">
+	<head>
+		<meta charset="UTF-8">
+		<script src="bower/jquery/jquery.js"></script>
+		<link rel="stylesheet" href="bower/normalize-css/normalize.css">
+		<link rel="stylesheet" href="style/fonts.css">
+		<link rel="stylesheet" href="style/style.css">
+		<title>Интернет-магазин</title>
+	</head>
+	<body>
+		<div class="info-row">
+			<div class="info-row__inner">
+				<ul class="socials">
+					<li class="socials__item"><a href="#" class="socials__link socials__link_fb">что-нибудь</a></li>
+					<li class="socials__item"><a href="#" class="socials__link socials__link_vk">что-нибудь</a></li>
+					<li class="socials__item"><a href="#" class="socials__link socials__link_tw">что-нибудь</a></li>
+				</ul>
+				<div class="phone">+7 (921) 123-12-13</div>
+				<div class="address">ул. Маяковская 6, офис 17</div>
+			</div>
+		</div>
+		<header class="header"><a href="#" class="logo"><img src="../img/header-logo.png" alt="Интернет-магазин" class="logo__image"></a>
+			<form class="search">
+				<input type="search" placeholder="Что будем искать" class="search__input">
+				<button type="submit" class="search__submit">Найти</button>
+			</form>
+			<div class="links">
+				<ul class="links__list">
+					<li class="links__item"><a href="#" class="links__link">Карта проезда</a></li>
+					<li class="links__item"><a href="#" class="links__link">История заказов</a></li>
+					<li class="links__item"><a href="#" class="links__link">Корзина</a></li>
+				</ul>
+			</div>
+		</header>
+		<nav class="nav">
+			<ul class="nav__list">
+				<li class="nav__item"><a href="#" class="nav__link">Планшеты</a></li>
+				<li class="nav__item"><a href="#" class="nav__link nav__link_active">Мобильные телефоны</a></li>
+				<li class="nav__item"><a href="#" class="nav__link">Mp3 плееры</a></li>
+				<li class="nav__item"><a href="#" class="nav__link">Персональные компьютеры</a></li>
+				<li class="nav__item"><a href="#" class="nav__link">Ноутбуки</a></li>
+				<li class="nav__item"><a href="#" class="nav__link">Аксессуары</a></li>
+				<li class="nav__item"><a href="#" class="nav__link">Бытовая техника</a>
+					<!--загуглить как передавать в многомерные массивы статус active-->
+				</li>
+			</ul>
+		</nav>
+		<div class="crumbs">
+			<ul class="crumbs__list">
+				<li class="crumbs__item"><a href="#" class="crumbs__link">Главная</a></li>
+				<li class="crumbs__item"><a href="#" class="crumbs__link crumbs__link_active">Каталог</a></li>
+			</ul>
+			<h2 class="page-title">Мобильные телефоны</h2>
+		</div>
+		<div class="main clearfix">
+			<div class="sidebar">
+				<div class="category">
+					<ul class="category__list">
+						<li class="category__item"><a href="#" class="category__link">Флагманы</a></li>
+						<li class="category__item"><a href="#" class="category__link category__link_active">Бюджетная линейка</a></li>
+					</ul>
+				</div>
+				<form class="filter">
+					<div class="filter-fieldset">
+						<h3 class="filter-fieldset__title">Наличие в магазинах</h3>
+						<label class="filter-label">
+							<input type="radio" checked name="shops" value="1" class="filter-label__input">
+							<div class="filter-label__text filter-label__text_radio">Во всех магазинах</div>
+						</label>
+						<label class="filter-label">
+							<input type="radio" name="shops" value="2" class="filter-label__input">
+							<div class="filter-label__text filter-label__text_radio">В ближайшем ко мне магазине</div>
+						</label>
+					</div>
+					<div class="filter-fieldset">
+						<h3 class="filter-fieldset__title">Бренды</h3>
+						<label class="filter-label">
+							<input type="checkbox" name="brands" value="0" class="filter-label__input">
+							<div class="filter-label__text filter-label__text_checkbox">Lenovo</div>
+						</label>
+						<label class="filter-label">
+							<input type="checkbox" name="brands" value="1" class="filter-label__input">
+							<div class="filter-label__text filter-label__text_checkbox">Apple</div>
+						</label>
+						<label class="filter-label">
+							<input type="checkbox" name="brands" value="2" class="filter-label__input">
+							<div class="filter-label__text filter-label__text_checkbox">Samsung</div>
+						</label>
+						<label class="filter-label">
+							<input type="checkbox" name="brands" value="3" class="filter-label__input">
+							<div class="filter-label__text filter-label__text_checkbox">Asus</div>
+						</label>
+						<label class="filter-label">
+							<input type="checkbox" name="brands" value="4" class="filter-label__input">
+							<div class="filter-label__text filter-label__text_checkbox">Motorola</div>
+						</label><a href="#" class="filter__reset">Сбросить фильтр</a>
+					</div>
+					<div class="filter-fieldset">
+						<h3 class="filter-fieldset__title">Цена</h3>
+						<label class="filter-label__range"><span class="filter-label__range-text">от</span>
+							<input type="text" class="filter-label__range-value">
+						</label>
+						<label class="filter-label__range"><span class="filter-label__range-text">до</span>
+							<input type="text" class="filter-label__range-value">
+						</label>
+						<div class="filter-label__range-bar"></div>
+					</div>
+					<div class="filter-fieldset">
+						<h3 class="filter-fieldset__title">Цвета</h3>
+						<label class="filter-label filter-label_colors">
+							<input type="checkbox" name="colors" value="#ffffff" class="filter-label__input">
+							<div class="filter-label__text_colors filter-label__text_#ffffff"></div>
+						</label>
+						<label class="filter-label filter-label_colors">
+							<input type="checkbox" name="colors" value="#cccccc" class="filter-label__input">
+							<div class="filter-label__text_colors filter-label__text_#cccccc"></div>
+						</label>
+						<label class="filter-label filter-label_colors">
+							<input type="checkbox" name="colors" value="#000000" class="filter-label__input">
+							<div class="filter-label__text_colors filter-label__text_#000000"></div>
+						</label>
+						<label class="filter-label filter-label_colors">
+							<input type="checkbox" name="colors" value="#0a3153" class="filter-label__input">
+							<div class="filter-label__text_colors filter-label__text_#0a3153"></div>
+						</label>
+						<label class="filter-label filter-label_colors">
+							<input type="checkbox" name="colors" value="#ff1800" class="filter-label__input">
+							<div class="filter-label__text_colors filter-label__text_#ff1800"></div>
+						</label>
+						<label class="filter-label filter-label_colors">
+							<input type="checkbox" name="colors" value="#fff343" class="filter-label__input">
+							<div class="filter-label__text_colors filter-label__text_#fff343"></div>
+						</label>
+						<label class="filter-label filter-label_colors">
+							<input type="checkbox" name="colors" value="#fb914a" class="filter-label__input">
+							<div class="filter-label__text_colors filter-label__text_#fb914a"></div>
+						</label>
+						<label class="filter-label filter-label_colors">
+							<input type="checkbox" name="colors" value="#92c37c" class="filter-label__input">
+							<div class="filter-label__text_colors filter-label__text_#92c37c"></div>
+						</label>
+						<label class="filter-label filter-label_colors">
+							<input type="checkbox" name="colors" value="#40a6ff" class="filter-label__input">
+							<div class="filter-label__text_colors filter-label__text_#40a6ff"></div>
+						</label>
+						<label class="filter-label filter-label_colors">
+							<input type="checkbox" name="colors" value="#9870ad" class="filter-label__input">
+							<div class="filter-label__text_colors filter-label__text_#9870ad"></div>
+						</label>
+						<label class="filter-label filter-label_colors">
+							<input type="checkbox" name="colors" value="#dc78ad" class="filter-label__input">
+							<div class="filter-label__text_colors filter-label__text_#dc78ad"></div>
+						</label>
+						<label class="filter-label filter-label_colors">
+							<input type="checkbox" name="colors" value="#7f401d" class="filter-label__input">
+							<div class="filter-label__text_colors filter-label__text_#7f401d"></div>
+						</label>
+					</div>
+					<div class="filter-fieldset">
+						<h3 class="filter-fieldset__title">Операционные системы</h3>
+						<label class="filter-label">
+							<input type="checkbox" name="oses" value="0" class="filter-label__input">
+							<div class="filter-label__text filter-label__text_checkbox">Android</div>
+						</label>
+						<label class="filter-label">
+							<input type="checkbox" name="oses" value="1" class="filter-label__input">
+							<div class="filter-label__text filter-label__text_checkbox">iOS</div>
+						</label>
+						<label class="filter-label">
+							<input type="checkbox" name="oses" value="2" class="filter-label__input">
+							<div class="filter-label__text filter-label__text_checkbox">Windows Mobile</div>
+						</label>
+						<label class="filter-label">
+							<input type="checkbox" name="oses" value="3" class="filter-label__input">
+							<div class="filter-label__text filter-label__text_checkbox">Symbian</div>
+						</label>
+						<label class="filter-label">
+							<input type="checkbox" name="oses" value="4" class="filter-label__input">
+							<div class="filter-label__text filter-label__text_checkbox">Custom</div>
+						</label><a href="#" class="filter__reset">Сбросить фильтр</a>
+					</div>
+				</form>
+			</div>
+			<div class="view-catalog">
+				<div class="view-sort"><span class="view-sort__text">Сортировать по</span>
+					<select class="view-sort__select">
+						<option>по цене</option>
+						<option>по популярности</option>
+					</select>
+				</div>
+				<ul class="view-catalog__list">
+					<li class="view-catalog__item">Вид каталога</li>
+					<li class="view-catalog__item"><a href="#" class="view-catalog__link view-catalog__link_1 view-catalog__link_active"></a></li>
+					<li class="view-catalog__item"><a href="#" class="view-catalog__link view-catalog__link_2"></a></li>
+					<li class="view-catalog__item"><a href="#" class="view-catalog__link view-catalog__link_3"></a></li>
+				</ul>
+			</div>
+			<div class="content">
+				<div class="item">
+					<div class="item__container_images">
+						<div class="item__images">
+							<div class="item__img_big"><img src="http://lorempixel.com/134/134/technics"></div>
+							<div class="item__img"><img src="http://lorempixel.com/32/32"></div>
+							<div class="item__img"><img src="http://lorempixel.com/32/32"></div>
+							<div class="item__img"><img src="http://lorempixel.com/32/32"></div>
+						</div>
+						<div class="item__articul">Артикул<span>189238</span></div>
+					</div>
+					<div class="item__container_about">
+						<div class="item__name">Samsung GT-I9301I GALAXY S 301I GALAXY S 3</div>
+						<ul class="item__table">
+							<li class="item__table-string"><span class="item__table-left">Тип SIM-карты</span><span class="item__table-right">Micro-SIM</span></li>
+							<li class="item__table-string"><span class="item__table-left">Количество SIM-карт</span><span class="item__table-right">1</span></li>
+							<li class="item__table-string"><span class="item__table-left">Цвет</span><span class="item__table-right">Белый</span></li>
+							<li class="item__table-string"><span class="item__table-left">ОС</span><span class="item__table-right">Android</span></li>
+							<li class="item__table-string"><span class="item__table-left">Связь 3G</span><span class="item__table-right">Есть</span></li>
+							<li class="item__table-string"><span class="item__table-left">4G (LTE)</span><span class="item__table-right">Нет</span></li>
+							<li class="item__table-string"><span class="item__table-left">GPS-модуль</span><span class="item__table-right">Есть</span></li>
+						</ul>
+						<div class="item__about">Смартфон Samsung GT-I9301I GALAXY S 3 Ceramic White, Моноблок, Micro-SIM, Android 4.4, 3G, Bluetooth 4.0, EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота процессора 1400 МГц...</div>
+						<div class="item__ratio">
+							<div class="item__ratio__mark">4</div><span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+						</div>
+					</div>
+					<div class="item__container_buy">
+						<div class="item__price">6 666 P</div>
+						<button class="item__buy">В корзину</button>
+						<div class="item__status">В наличии</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="item__container_images">
+						<div class="item__images">
+							<div class="item__img_big"><img src="http://lorempixel.com/134/134/technics"></div>
+							<div class="item__img"><img src="http://lorempixel.com/32/32"></div>
+							<div class="item__img"><img src="http://lorempixel.com/32/32"></div>
+							<div class="item__img"><img src="http://lorempixel.com/32/32"></div>
+						</div>
+						<div class="item__articul">Артикул<span>189238</span></div>
+					</div>
+					<div class="item__container_about">
+						<div class="item__name">Samsung GT-I9301I GALAXY S 301I GALAXY S 3</div>
+						<ul class="item__table">
+							<li class="item__table-string"><span class="item__table-left">Тип SIM-карты</span><span class="item__table-right">Micro-SIM</span></li>
+							<li class="item__table-string"><span class="item__table-left">Количество SIM-карт</span><span class="item__table-right">1</span></li>
+							<li class="item__table-string"><span class="item__table-left">Цвет</span><span class="item__table-right">Белый</span></li>
+							<li class="item__table-string"><span class="item__table-left">ОС</span><span class="item__table-right">Android</span></li>
+							<li class="item__table-string"><span class="item__table-left">Связь 3G</span><span class="item__table-right">Есть</span></li>
+							<li class="item__table-string"><span class="item__table-left">4G (LTE)</span><span class="item__table-right">Нет</span></li>
+							<li class="item__table-string"><span class="item__table-left">GPS-модуль</span><span class="item__table-right">Есть</span></li>
+						</ul>
+						<div class="item__about">Смартфон Samsung GT-I9301I GALAXY S 3 Ceramic White, Моноблок, Micro-SIM, Android 4.4, 3G, Bluetooth 4.0, EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота процессора 1400 МГц...</div>
+						<div class="item__ratio">
+							<div class="item__ratio__mark">4</div><span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+						</div>
+					</div>
+					<div class="item__container_buy">
+						<div class="item__price">6 666 P</div>
+						<button class="item__buy">В корзину</button>
+						<div class="item__status">В наличии</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="item__container_images">
+						<div class="item__images">
+							<div class="item__img_big"><img src="http://lorempixel.com/134/134/technics"></div>
+							<div class="item__img"><img src="http://lorempixel.com/32/32"></div>
+							<div class="item__img"><img src="http://lorempixel.com/32/32"></div>
+							<div class="item__img"><img src="http://lorempixel.com/32/32"></div>
+						</div>
+						<div class="item__articul">Артикул<span>189238</span></div>
+					</div>
+					<div class="item__container_about">
+						<div class="item__name">Samsung GT-I9301I GALAXY S 301I GALAXY S 3</div>
+						<ul class="item__table">
+							<li class="item__table-string"><span class="item__table-left">Тип SIM-карты</span><span class="item__table-right">Micro-SIM</span></li>
+							<li class="item__table-string"><span class="item__table-left">Количество SIM-карт</span><span class="item__table-right">1</span></li>
+							<li class="item__table-string"><span class="item__table-left">Цвет</span><span class="item__table-right">Белый</span></li>
+							<li class="item__table-string"><span class="item__table-left">ОС</span><span class="item__table-right">Android</span></li>
+							<li class="item__table-string"><span class="item__table-left">Связь 3G</span><span class="item__table-right">Есть</span></li>
+							<li class="item__table-string"><span class="item__table-left">4G (LTE)</span><span class="item__table-right">Нет</span></li>
+							<li class="item__table-string"><span class="item__table-left">GPS-модуль</span><span class="item__table-right">Есть</span></li>
+						</ul>
+						<div class="item__about">Смартфон Samsung GT-I9301I GALAXY S 3 Ceramic White, Моноблок, Micro-SIM, Android 4.4, 3G, Bluetooth 4.0, EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота процессора 1400 МГц...</div>
+						<div class="item__ratio">
+							<div class="item__ratio__mark">4</div><span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+						</div>
+					</div>
+					<div class="item__container_buy">
+						<div class="item__price">6 666 P</div>
+						<button class="item__buy">В корзину</button>
+						<div class="item__status">В наличии</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="item__container_images">
+						<div class="item__images">
+							<div class="item__img_big"><img src="http://lorempixel.com/134/134/technics"></div>
+							<div class="item__img"><img src="http://lorempixel.com/32/32"></div>
+							<div class="item__img"><img src="http://lorempixel.com/32/32"></div>
+							<div class="item__img"><img src="http://lorempixel.com/32/32"></div>
+						</div>
+						<div class="item__articul">Артикул<span>189238</span></div>
+					</div>
+					<div class="item__container_about">
+						<div class="item__name">Samsung GT-I9301I GALAXY S 301I GALAXY S 3</div>
+						<ul class="item__table">
+							<li class="item__table-string"><span class="item__table-left">Тип SIM-карты</span><span class="item__table-right">Micro-SIM</span></li>
+							<li class="item__table-string"><span class="item__table-left">Количество SIM-карт</span><span class="item__table-right">1</span></li>
+							<li class="item__table-string"><span class="item__table-left">Цвет</span><span class="item__table-right">Белый</span></li>
+							<li class="item__table-string"><span class="item__table-left">ОС</span><span class="item__table-right">Android</span></li>
+							<li class="item__table-string"><span class="item__table-left">Связь 3G</span><span class="item__table-right">Есть</span></li>
+							<li class="item__table-string"><span class="item__table-left">4G (LTE)</span><span class="item__table-right">Нет</span></li>
+							<li class="item__table-string"><span class="item__table-left">GPS-модуль</span><span class="item__table-right">Есть</span></li>
+						</ul>
+						<div class="item__about">Смартфон Samsung GT-I9301I GALAXY S 3 Ceramic White, Моноблок, Micro-SIM, Android 4.4, 3G, Bluetooth 4.0, EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота процессора 1400 МГц...</div>
+						<div class="item__ratio">
+							<div class="item__ratio__mark">4</div><span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+						</div>
+					</div>
+					<div class="item__container_buy">
+						<div class="item__price">6 666 P</div>
+						<button class="item__buy">В корзину</button>
+						<div class="item__status">В наличии</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="item__container_images">
+						<div class="item__images">
+							<div class="item__img_big"><img src="http://lorempixel.com/134/134/technics"></div>
+							<div class="item__img"><img src="http://lorempixel.com/32/32"></div>
+							<div class="item__img"><img src="http://lorempixel.com/32/32"></div>
+							<div class="item__img"><img src="http://lorempixel.com/32/32"></div>
+						</div>
+						<div class="item__articul">Артикул<span>189238</span></div>
+					</div>
+					<div class="item__container_about">
+						<div class="item__name">Samsung GT-I9301I GALAXY S 301I GALAXY S 3</div>
+						<ul class="item__table">
+							<li class="item__table-string"><span class="item__table-left">Тип SIM-карты</span><span class="item__table-right">Micro-SIM</span></li>
+							<li class="item__table-string"><span class="item__table-left">Количество SIM-карт</span><span class="item__table-right">1</span></li>
+							<li class="item__table-string"><span class="item__table-left">Цвет</span><span class="item__table-right">Белый</span></li>
+							<li class="item__table-string"><span class="item__table-left">ОС</span><span class="item__table-right">Android</span></li>
+							<li class="item__table-string"><span class="item__table-left">Связь 3G</span><span class="item__table-right">Есть</span></li>
+							<li class="item__table-string"><span class="item__table-left">4G (LTE)</span><span class="item__table-right">Нет</span></li>
+							<li class="item__table-string"><span class="item__table-left">GPS-модуль</span><span class="item__table-right">Есть</span></li>
+						</ul>
+						<div class="item__about">Смартфон Samsung GT-I9301I GALAXY S 3 Ceramic White, Моноблок, Micro-SIM, Android 4.4, 3G, Bluetooth 4.0, EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота процессора 1400 МГц...</div>
+						<div class="item__ratio">
+							<div class="item__ratio__mark">4</div><span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+						</div>
+					</div>
+					<div class="item__container_buy">
+						<div class="item__price">6 666 P</div>
+						<button class="item__buy">В корзину</button>
+						<div class="item__status">В наличии</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="item__container_images">
+						<div class="item__images">
+							<div class="item__img_big"><img src="http://lorempixel.com/134/134/technics"></div>
+							<div class="item__img"><img src="http://lorempixel.com/32/32"></div>
+							<div class="item__img"><img src="http://lorempixel.com/32/32"></div>
+							<div class="item__img"><img src="http://lorempixel.com/32/32"></div>
+						</div>
+						<div class="item__articul">Артикул<span>189238</span></div>
+					</div>
+					<div class="item__container_about">
+						<div class="item__name">Samsung GT-I9301I GALAXY S 301I GALAXY S 3</div>
+						<ul class="item__table">
+							<li class="item__table-string"><span class="item__table-left">Тип SIM-карты</span><span class="item__table-right">Micro-SIM</span></li>
+							<li class="item__table-string"><span class="item__table-left">Количество SIM-карт</span><span class="item__table-right">1</span></li>
+							<li class="item__table-string"><span class="item__table-left">Цвет</span><span class="item__table-right">Белый</span></li>
+							<li class="item__table-string"><span class="item__table-left">ОС</span><span class="item__table-right">Android</span></li>
+							<li class="item__table-string"><span class="item__table-left">Связь 3G</span><span class="item__table-right">Есть</span></li>
+							<li class="item__table-string"><span class="item__table-left">4G (LTE)</span><span class="item__table-right">Нет</span></li>
+							<li class="item__table-string"><span class="item__table-left">GPS-модуль</span><span class="item__table-right">Есть</span></li>
+						</ul>
+						<div class="item__about">Смартфон Samsung GT-I9301I GALAXY S 3 Ceramic White, Моноблок, Micro-SIM, Android 4.4, 3G, Bluetooth 4.0, EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота процессора 1400 МГц...</div>
+						<div class="item__ratio">
+							<div class="item__ratio__mark">4</div><span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+						</div>
+					</div>
+					<div class="item__container_buy">
+						<div class="item__price">6 666 P</div>
+						<button class="item__buy">В корзину</button>
+						<div class="item__status">В наличии</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="item__container_images">
+						<div class="item__images">
+							<div class="item__img_big"><img src="http://lorempixel.com/134/134/technics"></div>
+							<div class="item__img"><img src="http://lorempixel.com/32/32"></div>
+							<div class="item__img"><img src="http://lorempixel.com/32/32"></div>
+							<div class="item__img"><img src="http://lorempixel.com/32/32"></div>
+						</div>
+						<div class="item__articul">Артикул<span>189238</span></div>
+					</div>
+					<div class="item__container_about">
+						<div class="item__name">Samsung GT-I9301I GALAXY S 301I GALAXY S 3</div>
+						<ul class="item__table">
+							<li class="item__table-string"><span class="item__table-left">Тип SIM-карты</span><span class="item__table-right">Micro-SIM</span></li>
+							<li class="item__table-string"><span class="item__table-left">Количество SIM-карт</span><span class="item__table-right">1</span></li>
+							<li class="item__table-string"><span class="item__table-left">Цвет</span><span class="item__table-right">Белый</span></li>
+							<li class="item__table-string"><span class="item__table-left">ОС</span><span class="item__table-right">Android</span></li>
+							<li class="item__table-string"><span class="item__table-left">Связь 3G</span><span class="item__table-right">Есть</span></li>
+							<li class="item__table-string"><span class="item__table-left">4G (LTE)</span><span class="item__table-right">Нет</span></li>
+							<li class="item__table-string"><span class="item__table-left">GPS-модуль</span><span class="item__table-right">Есть</span></li>
+						</ul>
+						<div class="item__about">Смартфон Samsung GT-I9301I GALAXY S 3 Ceramic White, Моноблок, Micro-SIM, Android 4.4, 3G, Bluetooth 4.0, EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота процессора 1400 МГц...</div>
+						<div class="item__ratio">
+							<div class="item__ratio__mark">4</div><span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+						</div>
+					</div>
+					<div class="item__container_buy">
+						<div class="item__price">6 666 P</div>
+						<button class="item__buy">В корзину</button>
+						<div class="item__status">В наличии</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="item__container_images">
+						<div class="item__images">
+							<div class="item__img_big"><img src="http://lorempixel.com/134/134/technics"></div>
+							<div class="item__img"><img src="http://lorempixel.com/32/32"></div>
+							<div class="item__img"><img src="http://lorempixel.com/32/32"></div>
+							<div class="item__img"><img src="http://lorempixel.com/32/32"></div>
+						</div>
+						<div class="item__articul">Артикул<span>189238</span></div>
+					</div>
+					<div class="item__container_about">
+						<div class="item__name">Samsung GT-I9301I GALAXY S 301I GALAXY S 3</div>
+						<ul class="item__table">
+							<li class="item__table-string"><span class="item__table-left">Тип SIM-карты</span><span class="item__table-right">Micro-SIM</span></li>
+							<li class="item__table-string"><span class="item__table-left">Количество SIM-карт</span><span class="item__table-right">1</span></li>
+							<li class="item__table-string"><span class="item__table-left">Цвет</span><span class="item__table-right">Белый</span></li>
+							<li class="item__table-string"><span class="item__table-left">ОС</span><span class="item__table-right">Android</span></li>
+							<li class="item__table-string"><span class="item__table-left">Связь 3G</span><span class="item__table-right">Есть</span></li>
+							<li class="item__table-string"><span class="item__table-left">4G (LTE)</span><span class="item__table-right">Нет</span></li>
+							<li class="item__table-string"><span class="item__table-left">GPS-модуль</span><span class="item__table-right">Есть</span></li>
+						</ul>
+						<div class="item__about">Смартфон Samsung GT-I9301I GALAXY S 3 Ceramic White, Моноблок, Micro-SIM, Android 4.4, 3G, Bluetooth 4.0, EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота процессора 1400 МГц...</div>
+						<div class="item__ratio">
+							<div class="item__ratio__mark">4</div><span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+						</div>
+					</div>
+					<div class="item__container_buy">
+						<div class="item__price">6 666 P</div>
+						<button class="item__buy">В корзину</button>
+						<div class="item__status">В наличии</div>
+					</div>
+				</div>
+			</div>
+			<div class="paginator">
+				<ul class="paginator__list">
+					<li class="paginator__item"><a href="#" class="paginator__link"><</a></li>
+					<li class="paginator__item"><a href="#" class="paginator__link">1</a></li>
+					<li class="paginator__item"><a href="#" class="paginator__link">2</a></li>
+					<li class="paginator__item"><a href="#" class="paginator__link">3</a></li>
+					<li class="paginator__item"><a href="#" class="paginator__link">></a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="information">
+			<h2 class="information__title">Важная информация</h2>
+			<p class="information__text">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum necessitatibus, temporibus mollitia quisquam aperiam cupiditate qui maxime error eius! Illo, culpa a! Ut recusandae debitis, porro eaque temporibus, voluptatibus rem! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum necessitatibus, temporibus mollitia quisquam aperiam cupiditate qui maxime error eius! Illo, culpa a! Ut recusandae debitis, porro eaque temporibus, voluptatibus rem! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum necessitatibus, temporibus mollitia quisquam aperiam cupiditate qui maxime error eius! Illo, culpa a! Ut recusandae debitis, porro eaque temporibus, voluptatibus rem! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum necessitatibus, temporibus mollitia quisquam aperiam cupiditate qui maxime error eius! Illo, culpa a! Ut recusandae debitis, porro eaque temporibus, voluptatibus rem! 
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum necessitatibus, temporibus mollitia quisquam aperiam cupiditate qui maxime error eius! Illo, culpa a! Ut recusandae debitis, porro eaque temporibus, voluptatibus rem! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum necessitatibus, temporibus mollitia quisquam aperiam cupiditate qui maxime error eius! Illo, culpa a! Ut recusandae debitis, porro eaque temporibus, voluptatibus rem! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum necessitatibus, temporibus mollitia quisquam aperiam cupiditate qui maxime error eius! Illo, culpa a! Ut recusandae debitis, porro eaque temporibus, voluptatibus rem! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum necessitatibus, temporibus mollitia quisquam aperiam cupiditate qui maxime error eius! Illo, culpa a! Ut recusandae debitis, porro eaque temporibus, voluptatibus rem!
+			</p>
+		</div>
+		<footer class="footer">
+			<div class="footer__inner">
+				<div class="footer-left"><a href="#" class="logo"><img src="../img/footer-logo.png" alt="Интернет-магазин" class="logo__image"></a></div>
+				<div class="footer-right">
+					<ul class="socials socials_footer">
+						<li class="socials__item"><a href="#" class="socials__link socials__link_fb">что-нибудь</a></li>
+						<li class="socials__item"><a href="#" class="socials__link socials__link_vk">что-нибудь</a></li>
+						<li class="socials__item"><a href="#" class="socials__link socials__link_tw">что-нибудь</a></li>
+					</ul>
+					<ul class="nav__list nav__list_footer">
+						<li class="nav__item"><a href="#" class="nav__link">Планшеты</a></li>
+						<li class="nav__item"><a href="#" class="nav__link">Мобильные телефоны</a></li>
+						<li class="nav__item"><a href="#" class="nav__link">Mp3 плееры</a></li>
+						<li class="nav__item"><a href="#" class="nav__link">Персональные компьютеры</a></li>
+						<li class="nav__item"><a href="#" class="nav__link">Ноутбуки</a></li>
+						<li class="nav__item"><a href="#" class="nav__link">Аксессуары</a></li>
+						<li class="nav__item"><a href="#" class="nav__link">Бытовая техника</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="copy">All rights reserved. 2015. no copy alowed</div>
+		</footer>
+	</body>
+</html>

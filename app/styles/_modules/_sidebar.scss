@@ -1,0 +1,184 @@
+.sidebar{
+	float: left;
+}
+
+.category{
+	margin-bottom: 40px;
+}
+
+.category__list{
+	width:332px;
+	margin: 0;
+	padding: 0;
+}
+
+.category__item{
+	list-style: none;
+	&:first-child .category__link{
+		border-radius: 5px 5px 0 0;
+	}
+	&:last-child .category__link{
+		border-radius: 0 0 5px 5px;
+	}
+}
+
+.category__link{
+	box-sizing: border-box;
+	display: block;
+	text-decoration: none;
+	font-family: 'OpenSansRegular';
+	font-size: 14px;
+	color: #7f7f7f;
+	margin: 0;
+	width:332px;
+	background: #fff;
+	padding: 15px;
+	border:1px solid #dee1e4;
+
+}
+.category__link:hover,
+.category__link_active{
+	background: #d9e5ea;
+}
+
+.filter{
+	box-sizing: border-box;
+	width:332px;
+	background: #fff;
+	border: 1px solid #dee1e4;
+	border-radius: 5px;
+}
+
+.filter-fieldset{
+	padding: 16px 30px;
+	border-bottom: 1px solid #dee1e4;
+}
+.filter-fieldset__title{
+	font-family:'OpenSansSemibold';
+	font-size: 16px;
+	color: #333;
+	padding:0;
+	margin: 0 0 20px;
+}
+
+
+.filter-label{
+	display: block;
+	margin-bottom: 10px;
+}
+
+.filter-label__input[type="radio"]{
+	display: none;
+	&:checked ~ .filter-label__text_radio:before{
+		background-position: 26px 29px;
+	}
+}
+
+.filter-label__text_radio{
+	&:before{
+		content: ' ';
+		display: inline-block;
+		width: 20px;
+		height: 19px;
+		background: url("../img/spritesheet.png") 86px 29px;
+		margin-right: 10px;
+		vertical-align: middle;
+	}
+	&:hover{
+		cursor: pointer;
+		&:before{
+			background-position: 56px 29px;
+		}
+	}
+}
+
+.filter-label__text{
+	display: inline-block;
+	font-family: 'OpenSansRegular';
+	font-size: 14px;
+	color: #333;
+}
+
+.filter-label__input[type="checkbox"]{
+	display: none;
+	&:checked ~ .filter-label__text_checkbox:before{
+		background: #ff6600 url("../img/spritesheet.png") -81px -40px;
+	}
+}
+
+.filter-label__text_checkbox{
+	&:before{
+		content: ' ';
+		display: inline-block;
+		background: #dee1e4;
+		width: 19px;
+		height: 19px;
+		border-radius: 2px;
+		margin-right: 10px;
+		vertical-align: middle;
+	}
+	&:hover{
+		cursor: pointer;
+		&:before{
+			background: #dee1e4 url("../img/spritesheet.png") -81px -21px;
+		}
+	}
+}
+
+.filter__reset{
+	font-family: 'OpenSansRegular';
+	font-size: 14px;
+	color: #5db2fc;
+	display: block;
+	margin-top: 17px;
+}
+
+.filter-label_colors{
+	display: inline-block;
+	margin-right: 23px;
+}
+
+@mixin colors_in_side($colors...){
+	@each $color in $colors {
+		[class*="filter-label__text_#{$color}"]{
+			background: $color;
+		}
+	}
+}
+
+@include colors_in_side(#ffffff, #cccccc, #000000, #0a3153, #ff1800, #fff343, #fb914a, #92c37c, #40a6ff, #9870ad, #dc78ad, #7f401d);
+.filter-label__text_colors{
+	width: 35px;
+	height: 35px;
+	border: 1px solid #dee1e4;
+	&:hover{
+		cursor: pointer;
+		box-shadow: 0px 0px 1px 1px rgba(255,102,0,1);
+	}
+}
+
+.filter-label__input[type="checkbox"]{
+	display: none;
+	&:checked ~ .filter-label__text_colors{
+		box-shadow: 0px 0px 3px 2px rgba(255,102,0,1);
+	}
+}
+
+.filter-label__range{
+	display: inline-block;
+	&:first-of-type{
+		margin-right: 40px;
+	}
+}
+
+.filter-label__range-value{
+	box-sizing: border-box;
+	background: #fff;
+	box-shadow: inset 0px 1px 1px 0px #e7eaed;
+	width: 81px;
+	height: 28px;
+	border: 1px solid #dee1e4;
+	border-radius: 3px;
+	padding: 9px 8px;
+	margin-left: 9px;
+}

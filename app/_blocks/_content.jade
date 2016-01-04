@@ -1,0 +1,85 @@
+.view-catalog
+	.view-sort
+		span.view-sort__text Сортировать по
+		select.view-sort__select
+			option по цене
+			option по популярности
+
+
+	ul.view-catalog__list
+		li.view-catalog__item Вид каталога
+		li.view-catalog__item
+			a(href="#").view-catalog__link.view-catalog__link_1.view-catalog__link_active
+		li.view-catalog__item
+			a(href="#").view-catalog__link.view-catalog__link_2
+		li.view-catalog__item
+			a(href="#").view-catalog__link.view-catalog__link_3
+
+.content
+	-for(var i=1; i<9; i++)
+		.item
+			.item__container_images
+				.item__images
+					.item__img_big
+						img(src="http://lorempixel.com/134/134/technics")
+					.item__img
+						img(src="http://lorempixel.com/32/32")
+					.item__img
+						img(src="http://lorempixel.com/32/32")
+					.item__img
+						img(src="http://lorempixel.com/32/32")
+				.item__articul Артикул
+					span 189238
+
+			.item__container_about
+				.item__name Samsung GT-I9301I GALAXY S 301I GALAXY S 3
+				ul.item__table
+					li.item__table-string
+						span.item__table-left Тип SIM-карты
+						span.item__table-right Micro-SIM
+					li.item__table-string
+						span.item__table-left Количество SIM-карт
+						span.item__table-right 1
+					li.item__table-string
+						span.item__table-left Цвет
+						span.item__table-right Белый
+					li.item__table-string
+						span.item__table-left ОС
+						span.item__table-right Android
+					li.item__table-string
+						span.item__table-left Связь 3G
+						span.item__table-right Есть
+					li.item__table-string
+						span.item__table-left 4G (LTE)
+						span.item__table-right Нет
+					li.item__table-string
+						span.item__table-left GPS-модуль
+						span.item__table-right Есть
+				.item__about
+					| Смартфон Samsung GT-I9301I GALAXY S 3 Ceramic White, Моноблок, Micro-SIM, Android 4.4, 3G, Bluetooth 4.0, EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота процессора 1400 МГц...
+				.item__ratio
+					.item__ratio__mark 4
+					span ☆
+					span ☆
+					span ☆
+					span ☆
+					span ☆
+
+
+			.item__container_buy
+				.item__price 6 666 P
+				button.item__buy В корзину
+				.item__status В наличии
+
+.paginator
+	ul.paginator__list
+		li.paginator__item
+			a(href="#").paginator__link <
+		li.paginator__item
+			a(href="#").paginator__link 1
+		li.paginator__item
+			a(href="#").paginator__link 2
+		li.paginator__item
+			a(href="#").paginator__link 3
+		li.paginator__item
+			a(href="#").paginator__link >
