@@ -20,7 +20,7 @@ var config = {
 		destination : './develop/style'
 	},
 	js: {
-		directory: "./app/js/**/*.js",
+		directory: "./app/js/**/*.*",
 		destination : './develop/js'
 	},
 	images: {

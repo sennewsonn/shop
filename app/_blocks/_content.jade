@@ -9,11 +9,11 @@
 	ul.view-catalog__list
 		li.view-catalog__item Вид каталога
 		li.view-catalog__item
-			a(href="#").view-catalog__link.view-catalog__link_1.view-catalog__link_active
+			a(href="#" data-view=" ").view-catalog__link.view-catalog__link_1
 		li.view-catalog__item
-			a(href="#").view-catalog__link.view-catalog__link_2
+			a(href="#" data-view="item_tables").view-catalog__link.view-catalog__link_2
 		li.view-catalog__item
-			a(href="#").view-catalog__link.view-catalog__link_3
+			a(href="#" data-view="item_row").view-catalog__link.view-catalog__link_3
 
 .content
 	-for(var i=1; i<9; i++)
@@ -23,11 +23,11 @@
 					.item__img_big
 						img(src="http://lorempixel.com/134/134/technics")
 					.item__img
-						img(src="http://lorempixel.com/32/32")
+						img(src="http://lorempixel.com/134/134/animals")
 					.item__img
-						img(src="http://lorempixel.com/32/32")
+						img(src="http://lorempixel.com/134/134/abstract")
 					.item__img
-						img(src="http://lorempixel.com/32/32")
+						img(src="http://lorempixel.com/134/134")
 				.item__articul Артикул
 					span 189238
 

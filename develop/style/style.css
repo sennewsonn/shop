@@ -268,7 +268,27 @@ body {
   font-size: 16px;
   color: #333;
   padding: 0;
-  margin: 0 0 20px; }
+  margin: 0; }
+  .filter-fieldset__title:after {
+    content: ' ';
+    display: none;
+    background: url("../img/spritesheet.png");
+    width: 20px;
+    height: 12px;
+    float: right;
+    cursor: pointer;
+    margin-top: 5px;
+    background-position: 128px 64px; }
+  .filter-fieldset__title:hover {
+    cursor: pointer; }
+    .filter-fieldset__title:hover:after {
+      display: block; }
+
+.filter-fieldset__box {
+  margin-top: 20px; }
+
+.filter-fieldset__title_close:after {
+  background-position: 100px 64px; }
 
 .filter-label {
   display: block;
@@ -395,6 +415,18 @@ body {
   padding: 9px 8px;
   margin-left: 9px; }
 
+.filter-label__range-bar {
+  height: 2px;
+  margin-top: 15px;
+  background: #dee1e4; }
+
+.ui-slider-handle {
+  width: 7px !important;
+  background: #E1E4E2 !important;
+  height: 15px !important;
+  border-radius: none !important;
+  cursor: pointer !important; }
+
 .crumbs {
   width: 1100px;
   margin: 0 auto; }
@@ -479,22 +511,22 @@ body {
   width: 16px;
   height: 16px;
   cursor: pointer;
-  vertical-align: middle; }
+  vertical-align: middle;
+  opacity: .5; }
+  .view-catalog__link:hover {
+    opacity: 1; }
+
+.view-catalog__link_active {
+  opacity: 1; }
 
 .view-catalog__link_1 {
-  background-position: -5px -5px; }
-  .view-catalog__link_1:hover {
-    background-position: -31px -5px; }
+  background-position: -31px -5px; }
 
 .view-catalog__link_2 {
-  background-position: -31px -31px; }
-  .view-catalog__link_2:hover {
-    background-position: -57px -31px; }
+  background-position: -57px -31px; }
 
 .view-catalog__link_3 {
-  background-position: -57px -5px; }
-  .view-catalog__link_3:hover {
-    background-position: -5px -31px; }
+  background-position: -5px -31px; }
 
 .view-sort {
   float: left;
@@ -528,17 +560,24 @@ body {
   width: 134px;
   height: 134px;
   border: 1px solid #dee1e4;
-  margin-bottom: 15px; }
+  margin-bottom: 15px;
+  overflow: hidden; }
+  .item__img_big img {
+    width: 100%; }
 
 .item__img {
   box-sizing: border-box;
   width: 32px;
   height: 32px;
+  overflow: hidden;
   display: inline-block;
+  cursor: pointer;
   margin-right: 15px;
   border: 1px solid #dee1e4; }
   .item__img:last-child {
     margin-right: 0; }
+  .item__img img {
+    width: 100%; }
 
 .item__table {
   display: none; }

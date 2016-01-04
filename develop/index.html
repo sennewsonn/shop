@@ -2,10 +2,14 @@
 <html lang="ru_RU">
 	<head>
 		<meta charset="UTF-8">
-		<script src="bower/jquery/jquery.js"></script>
 		<link rel="stylesheet" href="bower/normalize-css/normalize.css">
 		<link rel="stylesheet" href="style/fonts.css">
+		<link rel="stylesheet" href="js/jquery-ui/jquery-ui.css">
 		<link rel="stylesheet" href="style/style.css">
+		<script src="js/jquery.js"></script>
+		<script src="js/jquery-ui/jquery-ui.js"></script>
+		<script src="js/jquery.columnizer.js"></script>
+		<script src="js/file.js"></script>
 		<title>Интернет-магазин</title>
 	</head>
 	<body>
@@ -64,121 +68,131 @@
 				<form class="filter">
 					<div class="filter-fieldset">
 						<h3 class="filter-fieldset__title">Наличие в магазинах</h3>
-						<label class="filter-label">
-							<input type="radio" checked name="shops" value="1" class="filter-label__input">
-							<div class="filter-label__text filter-label__text_radio">Во всех магазинах</div>
-						</label>
-						<label class="filter-label">
-							<input type="radio" name="shops" value="2" class="filter-label__input">
-							<div class="filter-label__text filter-label__text_radio">В ближайшем ко мне магазине</div>
-						</label>
+						<div class="filter-fieldset__box">
+							<label class="filter-label">
+								<input type="radio" checked name="shops" value="1" class="filter-label__input">
+								<div class="filter-label__text filter-label__text_radio">Во всех магазинах</div>
+							</label>
+							<label class="filter-label">
+								<input type="radio" name="shops" value="2" class="filter-label__input">
+								<div class="filter-label__text filter-label__text_radio">В ближайшем ко мне магазине</div>
+							</label>
+						</div>
 					</div>
 					<div class="filter-fieldset">
 						<h3 class="filter-fieldset__title">Бренды</h3>
-						<label class="filter-label">
-							<input type="checkbox" name="brands" value="0" class="filter-label__input">
-							<div class="filter-label__text filter-label__text_checkbox">Lenovo</div>
-						</label>
-						<label class="filter-label">
-							<input type="checkbox" name="brands" value="1" class="filter-label__input">
-							<div class="filter-label__text filter-label__text_checkbox">Apple</div>
-						</label>
-						<label class="filter-label">
-							<input type="checkbox" name="brands" value="2" class="filter-label__input">
-							<div class="filter-label__text filter-label__text_checkbox">Samsung</div>
-						</label>
-						<label class="filter-label">
-							<input type="checkbox" name="brands" value="3" class="filter-label__input">
-							<div class="filter-label__text filter-label__text_checkbox">Asus</div>
-						</label>
-						<label class="filter-label">
-							<input type="checkbox" name="brands" value="4" class="filter-label__input">
-							<div class="filter-label__text filter-label__text_checkbox">Motorola</div>
-						</label><a href="#" class="filter__reset">Сбросить фильтр</a>
+						<div class="filter-fieldset__box">
+							<label class="filter-label">
+								<input type="checkbox" name="brands" value="0" class="filter-label__input">
+								<div class="filter-label__text filter-label__text_checkbox">Lenovo</div>
+							</label>
+							<label class="filter-label">
+								<input type="checkbox" name="brands" value="1" class="filter-label__input">
+								<div class="filter-label__text filter-label__text_checkbox">Apple</div>
+							</label>
+							<label class="filter-label">
+								<input type="checkbox" name="brands" value="2" class="filter-label__input">
+								<div class="filter-label__text filter-label__text_checkbox">Samsung</div>
+							</label>
+							<label class="filter-label">
+								<input type="checkbox" name="brands" value="3" class="filter-label__input">
+								<div class="filter-label__text filter-label__text_checkbox">Asus</div>
+							</label>
+							<label class="filter-label">
+								<input type="checkbox" name="brands" value="4" class="filter-label__input">
+								<div class="filter-label__text filter-label__text_checkbox">Motorola</div>
+							</label><a href="#" class="filter__reset">Сбросить фильтр</a>
+						</div>
 					</div>
 					<div class="filter-fieldset">
 						<h3 class="filter-fieldset__title">Цена</h3>
-						<label class="filter-label__range"><span class="filter-label__range-text">от</span>
-							<input type="text" class="filter-label__range-value">
-						</label>
-						<label class="filter-label__range"><span class="filter-label__range-text">до</span>
-							<input type="text" class="filter-label__range-value">
-						</label>
-						<div class="filter-label__range-bar"></div>
+						<div class="filter-fieldset__box">
+							<label class="filter-label__range"><span class="filter-label__range-text">от</span>
+								<input type="text" disabled class="filter-label__range-value range__from">
+							</label>
+							<label class="filter-label__range"><span class="filter-label__range-text">до</span>
+								<input type="text" disabled class="filter-label__range-value range__to">
+							</label>
+							<div class="filter-label__range-bar"></div>
+						</div>
 					</div>
 					<div class="filter-fieldset">
 						<h3 class="filter-fieldset__title">Цвета</h3>
-						<label class="filter-label filter-label_colors">
-							<input type="checkbox" name="colors" value="#ffffff" class="filter-label__input">
-							<div class="filter-label__text_colors filter-label__text_#ffffff"></div>
-						</label>
-						<label class="filter-label filter-label_colors">
-							<input type="checkbox" name="colors" value="#cccccc" class="filter-label__input">
-							<div class="filter-label__text_colors filter-label__text_#cccccc"></div>
-						</label>
-						<label class="filter-label filter-label_colors">
-							<input type="checkbox" name="colors" value="#000000" class="filter-label__input">
-							<div class="filter-label__text_colors filter-label__text_#000000"></div>
-						</label>
-						<label class="filter-label filter-label_colors">
-							<input type="checkbox" name="colors" value="#0a3153" class="filter-label__input">
-							<div class="filter-label__text_colors filter-label__text_#0a3153"></div>
-						</label>
-						<label class="filter-label filter-label_colors">
-							<input type="checkbox" name="colors" value="#ff1800" class="filter-label__input">
-							<div class="filter-label__text_colors filter-label__text_#ff1800"></div>
-						</label>
-						<label class="filter-label filter-label_colors">
-							<input type="checkbox" name="colors" value="#fff343" class="filter-label__input">
-							<div class="filter-label__text_colors filter-label__text_#fff343"></div>
-						</label>
-						<label class="filter-label filter-label_colors">
-							<input type="checkbox" name="colors" value="#fb914a" class="filter-label__input">
-							<div class="filter-label__text_colors filter-label__text_#fb914a"></div>
-						</label>
-						<label class="filter-label filter-label_colors">
-							<input type="checkbox" name="colors" value="#92c37c" class="filter-label__input">
-							<div class="filter-label__text_colors filter-label__text_#92c37c"></div>
-						</label>
-						<label class="filter-label filter-label_colors">
-							<input type="checkbox" name="colors" value="#40a6ff" class="filter-label__input">
-							<div class="filter-label__text_colors filter-label__text_#40a6ff"></div>
-						</label>
-						<label class="filter-label filter-label_colors">
-							<input type="checkbox" name="colors" value="#9870ad" class="filter-label__input">
-							<div class="filter-label__text_colors filter-label__text_#9870ad"></div>
-						</label>
-						<label class="filter-label filter-label_colors">
-							<input type="checkbox" name="colors" value="#dc78ad" class="filter-label__input">
-							<div class="filter-label__text_colors filter-label__text_#dc78ad"></div>
-						</label>
-						<label class="filter-label filter-label_colors">
-							<input type="checkbox" name="colors" value="#7f401d" class="filter-label__input">
-							<div class="filter-label__text_colors filter-label__text_#7f401d"></div>
-						</label>
+						<div class="filter-fieldset__box">
+							<label class="filter-label filter-label_colors">
+								<input type="checkbox" name="colors" value="#ffffff" class="filter-label__input">
+								<div class="filter-label__text_colors filter-label__text_#ffffff"></div>
+							</label>
+							<label class="filter-label filter-label_colors">
+								<input type="checkbox" name="colors" value="#cccccc" class="filter-label__input">
+								<div class="filter-label__text_colors filter-label__text_#cccccc"></div>
+							</label>
+							<label class="filter-label filter-label_colors">
+								<input type="checkbox" name="colors" value="#000000" class="filter-label__input">
+								<div class="filter-label__text_colors filter-label__text_#000000"></div>
+							</label>
+							<label class="filter-label filter-label_colors">
+								<input type="checkbox" name="colors" value="#0a3153" class="filter-label__input">
+								<div class="filter-label__text_colors filter-label__text_#0a3153"></div>
+							</label>
+							<label class="filter-label filter-label_colors">
+								<input type="checkbox" name="colors" value="#ff1800" class="filter-label__input">
+								<div class="filter-label__text_colors filter-label__text_#ff1800"></div>
+							</label>
+							<label class="filter-label filter-label_colors">
+								<input type="checkbox" name="colors" value="#fff343" class="filter-label__input">
+								<div class="filter-label__text_colors filter-label__text_#fff343"></div>
+							</label>
+							<label class="filter-label filter-label_colors">
+								<input type="checkbox" name="colors" value="#fb914a" class="filter-label__input">
+								<div class="filter-label__text_colors filter-label__text_#fb914a"></div>
+							</label>
+							<label class="filter-label filter-label_colors">
+								<input type="checkbox" name="colors" value="#92c37c" class="filter-label__input">
+								<div class="filter-label__text_colors filter-label__text_#92c37c"></div>
+							</label>
+							<label class="filter-label filter-label_colors">
+								<input type="checkbox" name="colors" value="#40a6ff" class="filter-label__input">
+								<div class="filter-label__text_colors filter-label__text_#40a6ff"></div>
+							</label>
+							<label class="filter-label filter-label_colors">
+								<input type="checkbox" name="colors" value="#9870ad" class="filter-label__input">
+								<div class="filter-label__text_colors filter-label__text_#9870ad"></div>
+							</label>
+							<label class="filter-label filter-label_colors">
+								<input type="checkbox" name="colors" value="#dc78ad" class="filter-label__input">
+								<div class="filter-label__text_colors filter-label__text_#dc78ad"></div>
+							</label>
+							<label class="filter-label filter-label_colors">
+								<input type="checkbox" name="colors" value="#7f401d" class="filter-label__input">
+								<div class="filter-label__text_colors filter-label__text_#7f401d"></div>
+							</label>
+						</div>
 					</div>
 					<div class="filter-fieldset">
 						<h3 class="filter-fieldset__title">Операционные системы</h3>
-						<label class="filter-label">
-							<input type="checkbox" name="oses" value="0" class="filter-label__input">
-							<div class="filter-label__text filter-label__text_checkbox">Android</div>
-						</label>
-						<label class="filter-label">
-							<input type="checkbox" name="oses" value="1" class="filter-label__input">
-							<div class="filter-label__text filter-label__text_checkbox">iOS</div>
-						</label>
-						<label class="filter-label">
-							<input type="checkbox" name="oses" value="2" class="filter-label__input">
-							<div class="filter-label__text filter-label__text_checkbox">Windows Mobile</div>
-						</label>
-						<label class="filter-label">
-							<input type="checkbox" name="oses" value="3" class="filter-label__input">
-							<div class="filter-label__text filter-label__text_checkbox">Symbian</div>
-						</label>
-						<label class="filter-label">
-							<input type="checkbox" name="oses" value="4" class="filter-label__input">
-							<div class="filter-label__text filter-label__text_checkbox">Custom</div>
-						</label><a href="#" class="filter__reset">Сбросить фильтр</a>
+						<div class="filter-fieldset__box">
+							<label class="filter-label">
+								<input type="checkbox" name="oses" value="0" class="filter-label__input">
+								<div class="filter-label__text filter-label__text_checkbox">Android</div>
+							</label>
+							<label class="filter-label">
+								<input type="checkbox" name="oses" value="1" class="filter-label__input">
+								<div class="filter-label__text filter-label__text_checkbox">iOS</div>
+							</label>
+							<label class="filter-label">
+								<input type="checkbox" name="oses" value="2" class="filter-label__input">
+								<div class="filter-label__text filter-label__text_checkbox">Windows Mobile</div>
+							</label>
+							<label class="filter-label">
+								<input type="checkbox" name="oses" value="3" class="filter-label__input">
+								<div class="filter-label__text filter-label__text_checkbox">Symbian</div>
+							</label>
+							<label class="filter-label">
+								<input type="checkbox" name="oses" value="4" class="filter-label__input">
+								<div class="filter-label__text filter-label__text_checkbox">Custom</div>
+							</label><a href="#" class="filter__reset">Сбросить фильтр</a>
+						</div>
 					</div>
 				</form>
 			</div>
@@ -191,9 +205,9 @@
 				</div>
 				<ul class="view-catalog__list">
 					<li class="view-catalog__item">Вид каталога</li>
-					<li class="view-catalog__item"><a href="#" class="view-catalog__link view-catalog__link_1 view-catalog__link_active"></a></li>
-					<li class="view-catalog__item"><a href="#" class="view-catalog__link view-catalog__link_2"></a></li>
-					<li class="view-catalog__item"><a href="#" class="view-catalog__link view-catalog__link_3"></a></li>
+					<li class="view-catalog__item"><a href="#" data-view=" " class="view-catalog__link view-catalog__link_1"></a></li>
+					<li class="view-catalog__item"><a href="#" data-view="item_tables" class="view-catalog__link view-catalog__link_2"></a></li>
+					<li class="view-catalog__item"><a href="#" data-view="item_row" class="view-catalog__link view-catalog__link_3"></a></li>
 				</ul>
 			</div>
 			<div class="content">
@@ -201,9 +215,9 @@
 					<div class="item__container_images">
 						<div class="item__images">
 							<div class="item__img_big"><img src="http://lorempixel.com/134/134/technics"></div>
-							<div class="item__img"><img src="http://lorempixel.com/32/32"></div>
-							<div class="item__img"><img src="http://lorempixel.com/32/32"></div>
-							<div class="item__img"><img src="http://lorempixel.com/32/32"></div>
+							<div class="item__img"><img src="http://lorempixel.com/134/134/animals"></div>
+							<div class="item__img"><img src="http://lorempixel.com/134/134/abstract"></div>
+							<div class="item__img"><img src="http://lorempixel.com/134/134"></div>
 						</div>
 						<div class="item__articul">Артикул<span>189238</span></div>
 					</div>
@@ -233,9 +247,9 @@
 					<div class="item__container_images">
 						<div class="item__images">
 							<div class="item__img_big"><img src="http://lorempixel.com/134/134/technics"></div>
-							<div class="item__img"><img src="http://lorempixel.com/32/32"></div>
-							<div class="item__img"><img src="http://lorempixel.com/32/32"></div>
-							<div class="item__img"><img src="http://lorempixel.com/32/32"></div>
+							<div class="item__img"><img src="http://lorempixel.com/134/134/animals"></div>
+							<div class="item__img"><img src="http://lorempixel.com/134/134/abstract"></div>
+							<div class="item__img"><img src="http://lorempixel.com/134/134"></div>
 						</div>
 						<div class="item__articul">Артикул<span>189238</span></div>
 					</div>
@@ -265,9 +279,9 @@
 					<div class="item__container_images">
 						<div class="item__images">
 							<div class="item__img_big"><img src="http://lorempixel.com/134/134/technics"></div>
-							<div class="item__img"><img src="http://lorempixel.com/32/32"></div>
-							<div class="item__img"><img src="http://lorempixel.com/32/32"></div>
-							<div class="item__img"><img src="http://lorempixel.com/32/32"></div>
+							<div class="item__img"><img src="http://lorempixel.com/134/134/animals"></div>
+							<div class="item__img"><img src="http://lorempixel.com/134/134/abstract"></div>
+							<div class="item__img"><img src="http://lorempixel.com/134/134"></div>
 						</div>
 						<div class="item__articul">Артикул<span>189238</span></div>
 					</div>
@@ -297,9 +311,9 @@
 					<div class="item__container_images">
 						<div class="item__images">
 							<div class="item__img_big"><img src="http://lorempixel.com/134/134/technics"></div>
-							<div class="item__img"><img src="http://lorempixel.com/32/32"></div>
-							<div class="item__img"><img src="http://lorempixel.com/32/32"></div>
-							<div class="item__img"><img src="http://lorempixel.com/32/32"></div>
+							<div class="item__img"><img src="http://lorempixel.com/134/134/animals"></div>
+							<div class="item__img"><img src="http://lorempixel.com/134/134/abstract"></div>
+							<div class="item__img"><img src="http://lorempixel.com/134/134"></div>
 						</div>
 						<div class="item__articul">Артикул<span>189238</span></div>
 					</div>
@@ -329,9 +343,9 @@
 					<div class="item__container_images">
 						<div class="item__images">
 							<div class="item__img_big"><img src="http://lorempixel.com/134/134/technics"></div>
-							<div class="item__img"><img src="http://lorempixel.com/32/32"></div>
-							<div class="item__img"><img src="http://lorempixel.com/32/32"></div>
-							<div class="item__img"><img src="http://lorempixel.com/32/32"></div>
+							<div class="item__img"><img src="http://lorempixel.com/134/134/animals"></div>
+							<div class="item__img"><img src="http://lorempixel.com/134/134/abstract"></div>
+							<div class="item__img"><img src="http://lorempixel.com/134/134"></div>
 						</div>
 						<div class="item__articul">Артикул<span>189238</span></div>
 					</div>
@@ -361,9 +375,9 @@
 					<div class="item__container_images">
 						<div class="item__images">
 							<div class="item__img_big"><img src="http://lorempixel.com/134/134/technics"></div>
-							<div class="item__img"><img src="http://lorempixel.com/32/32"></div>
-							<div class="item__img"><img src="http://lorempixel.com/32/32"></div>
-							<div class="item__img"><img src="http://lorempixel.com/32/32"></div>
+							<div class="item__img"><img src="http://lorempixel.com/134/134/animals"></div>
+							<div class="item__img"><img src="http://lorempixel.com/134/134/abstract"></div>
+							<div class="item__img"><img src="http://lorempixel.com/134/134"></div>
 						</div>
 						<div class="item__articul">Артикул<span>189238</span></div>
 					</div>
@@ -393,9 +407,9 @@
 					<div class="item__container_images">
 						<div class="item__images">
 							<div class="item__img_big"><img src="http://lorempixel.com/134/134/technics"></div>
-							<div class="item__img"><img src="http://lorempixel.com/32/32"></div>
-							<div class="item__img"><img src="http://lorempixel.com/32/32"></div>
-							<div class="item__img"><img src="http://lorempixel.com/32/32"></div>
+							<div class="item__img"><img src="http://lorempixel.com/134/134/animals"></div>
+							<div class="item__img"><img src="http://lorempixel.com/134/134/abstract"></div>
+							<div class="item__img"><img src="http://lorempixel.com/134/134"></div>
 						</div>
 						<div class="item__articul">Артикул<span>189238</span></div>
 					</div>
@@ -425,9 +439,9 @@
 					<div class="item__container_images">
 						<div class="item__images">
 							<div class="item__img_big"><img src="http://lorempixel.com/134/134/technics"></div>
-							<div class="item__img"><img src="http://lorempixel.com/32/32"></div>
-							<div class="item__img"><img src="http://lorempixel.com/32/32"></div>
-							<div class="item__img"><img src="http://lorempixel.com/32/32"></div>
+							<div class="item__img"><img src="http://lorempixel.com/134/134/animals"></div>
+							<div class="item__img"><img src="http://lorempixel.com/134/134/abstract"></div>
+							<div class="item__img"><img src="http://lorempixel.com/134/134"></div>
 						</div>
 						<div class="item__articul">Артикул<span>189238</span></div>
 					</div>
@@ -466,10 +480,12 @@
 		</div>
 		<div class="information">
 			<h2 class="information__title">Важная информация</h2>
-			<p class="information__text">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum necessitatibus, temporibus mollitia quisquam aperiam cupiditate qui maxime error eius! Illo, culpa a! Ut recusandae debitis, porro eaque temporibus, voluptatibus rem! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum necessitatibus, temporibus mollitia quisquam aperiam cupiditate qui maxime error eius! Illo, culpa a! Ut recusandae debitis, porro eaque temporibus, voluptatibus rem! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum necessitatibus, temporibus mollitia quisquam aperiam cupiditate qui maxime error eius! Illo, culpa a! Ut recusandae debitis, porro eaque temporibus, voluptatibus rem! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum necessitatibus, temporibus mollitia quisquam aperiam cupiditate qui maxime error eius! Illo, culpa a! Ut recusandae debitis, porro eaque temporibus, voluptatibus rem! 
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum necessitatibus, temporibus mollitia quisquam aperiam cupiditate qui maxime error eius! Illo, culpa a! Ut recusandae debitis, porro eaque temporibus, voluptatibus rem! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum necessitatibus, temporibus mollitia quisquam aperiam cupiditate qui maxime error eius! Illo, culpa a! Ut recusandae debitis, porro eaque temporibus, voluptatibus rem! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum necessitatibus, temporibus mollitia quisquam aperiam cupiditate qui maxime error eius! Illo, culpa a! Ut recusandae debitis, porro eaque temporibus, voluptatibus rem! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum necessitatibus, temporibus mollitia quisquam aperiam cupiditate qui maxime error eius! Illo, culpa a! Ut recusandae debitis, porro eaque temporibus, voluptatibus rem!
-			</p>
+			<div class="information__text">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum necessitatibus, temporibus mollitia quisquam aperiam cupiditate qui maxime error eius! Illo, culpa a! Ut recusandae debitis, porro eaque temporibus, voluptatibus rem! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum necessitatibus, temporibus mollitia quisquam aperiam cupiditate qui maxime error eius! Illo, culpa a! Ut recusandae debitis, porro eaque temporibus, voluptatibus rem! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum necessitatibus, temporibus mollitia quisquam aperiam cupiditate qui maxime error eius! Illo, culpa a! Ut recusandae debitis, porro eaque temporibus, voluptatibus rem! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum necessitatibus, temporibus mollitia quisquam aperiam cupiditate qui maxime error eius! Illo, culpa a! Ut recusandae debitis, porro eaque temporibus, voluptatibus rem!</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum necessitatibus, temporibus mollitia quisquam aperiam cupiditate qui maxime error eius! Illo, culpa a! Ut recusandae debitis, porro eaque temporibus, voluptatibus rem! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum necessitatibus, temporibus mollitia quisquam aperiam cupiditate qui maxime error eius! Illo, culpa a! Ut recusandae debitis, porro eaque temporibus, voluptatibus rem! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum necessitatibus, temporibus mollitia quisquam aperiam cupiditate qui maxime error eius! Illo, culpa a! Ut recusandae debitis, porro eaque temporibus, voluptatibus rem! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum necessitatibus, temporibus mollitia quisquam aperiam cupiditate qui maxime error eius! Illo, culpa a! Ut recusandae debitis, porro eaque temporibus, voluptatibus rem!</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum necessitatibus, temporibus mollitia quisquam aperiam cupiditate qui maxime error eius! Illo, culpa a! Ut recusandae debitis, porro eaque temporibus, voluptatibus rem! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum necessitatibus, temporibus mollitia quisquam aperiam cupiditate qui maxime error eius! Illo, culpa a! Ut recusandae debitis, porro eaque temporibus, voluptatibus rem! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum necessitatibus, temporibus mollitia quisquam aperiam cupiditate qui maxime error eius! Illo, culpa a! Ut recusandae debitis, porro eaque temporibus, voluptatibus rem! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum necessitatibus, temporibus mollitia quisquam aperiam cupiditate qui maxime error eius! Illo, culpa a! Ut recusandae debitis, porro eaque temporibus, voluptatibus rem!</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum necessitatibus, temporibus mollitia quisquam aperiam cupiditate qui maxime error eius! Illo, culpa a! Ut recusandae debitis, porro eaque temporibus, voluptatibus rem! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum necessitatibus, temporibus mollitia quisquam aperiam cupiditate qui maxime error eius! Illo, culpa a! Ut recusandae debitis, porro eaque temporibus, voluptatibus rem! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum necessitatibus, temporibus mollitia quisquam aperiam cupiditate qui maxime error eius! Illo, culpa a! Ut recusandae debitis, porro eaque temporibus, voluptatibus rem! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum necessitatibus, temporibus mollitia quisquam aperiam cupiditate qui maxime error eius! Illo, culpa a! Ut recusandae debitis, porro eaque temporibus, voluptatibus rem!</p>
+			</div>
 		</div>
 		<footer class="footer">
 			<div class="footer__inner">
